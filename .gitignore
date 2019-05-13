@@ -4,3 +4,9 @@
 *.iml
 *.iws
 out/
+
+#mvn
+target/
+.settings/
+.project
+.classpath

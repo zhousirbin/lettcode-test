@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class LongestTest {
+
+    //最长不重复子串
     public static void main(String[] args) {
         int a = lengthOfLongestSubstring("ahhbcunndrf");
         int b = lengthOfLongestSubstring1("asdffegdnc");
@@ -54,7 +56,6 @@ public class LongestTest {
             if (!set.contains(s.charAt(j))) {
                 set.add(s.charAt(j++));
                 l1 = Math.max(l1, j - i);
-
             } else {
                 set.remove(s.charAt(i++));
             }

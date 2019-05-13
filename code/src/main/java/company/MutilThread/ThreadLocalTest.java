@@ -3,7 +3,7 @@ package company.MutilThread;
 
 
 public class ThreadLocalTest  {
-    ThreadLocal<Long> longLocal = new ThreadLocal<Long>();//主线程和子线程分别有一份拷贝，互相不干扰。
+    ThreadLocal<Long>     longLocal = new ThreadLocal<Long>();//主线程和子线程分别有一份拷贝，互相不干扰。
     ThreadLocal<String> stringLocal = new ThreadLocal<String>();
 
 

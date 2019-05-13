@@ -66,4 +66,11 @@ public class ThreeClose {
         }
         return result;
     }
+
+    public static int threeSumClosest2(int[] num, int target) {
+
+
+
+        return 0;
+    }
 }

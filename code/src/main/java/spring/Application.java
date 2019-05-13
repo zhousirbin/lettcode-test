@@ -24,6 +24,7 @@ public class Application {
 
 		System.out.println( "Hello World!" );
 		ApplicationContext applicationContext = SpringApplication.run(Application.class, args);
+
 		System.out.println(args);
 		System.out.println( "11111" );
 		System.out.println(applicationContext);
@@ -31,6 +32,7 @@ public class Application {
 		ApplicationUtil.setApplicationContext(applicationContext);
 		  System.out.println("aaa"+ApplicationUtil.getApplicationContext());
 		WebApplicationType webApplicationType = null;
-		BeanFactory beanFactory = null;
+		BeanFactory beanFactory = applicationContext.getParentBeanFactory();
+		beanFactory.getBean("person");
 	}
 }

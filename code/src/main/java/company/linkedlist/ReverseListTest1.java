@@ -150,6 +150,25 @@ public class ReverseListTest1 {
 
     }
 
+    public static Node reverseList3(Node node) {
+
+        Node pre = null;
+        Node cur = node;
+        while(cur!=null){
+
+            Node next = cur.getNext();
+           cur.setNext(pre);
+           pre = cur;
+           cur = next;
+
+        }
+        return  pre;
+    }
+
+
+
+
+
 
 
 }

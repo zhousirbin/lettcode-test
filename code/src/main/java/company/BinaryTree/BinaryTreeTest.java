@@ -1,6 +1,8 @@
 package company.BinaryTree;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class BinaryTreeTest {
     public static void main(String[] args) {
@@ -34,6 +36,7 @@ public class BinaryTreeTest {
         TreeNode<Character> root = binaryTree.creatBinaryPre(tree);
 
         //先序遍历（递归）
+        System.out.println("先序遍历");
         binaryTree.PrintBinaryTreePreRecur(root);
         System.out.println();
         //中序遍历（递归）
@@ -54,8 +57,19 @@ public class BinaryTreeTest {
         binaryTree.PrintBinaryTreeBacUnrecur(root);
         System.out.println();
         //层次遍历（非递归）
+        System.out.println("层序遍历");
         binaryTree.PrintBinaryTreeLayerUnrecur(root);
         System.out.println();
+
+        System.out.println("深度遍历");
+        binaryTree.PrintBinaryTreeLayerUnrecur4(root);
+        System.out.println();
+
+        List<Integer>  list = new ArrayList<>();
+        list.add(0,1);
+        list.add(0,2);
+        list.add(0,3);
+        System.out.println(list);
     }
 
 }

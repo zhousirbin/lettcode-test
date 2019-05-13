@@ -17,6 +17,25 @@ public class KuaiPai {
         return low;                   //返回中轴的位置
     }
 
+    public int  getMiddle1(Integer[] list, int low,int high){
+
+        int temp = list[low];
+        while(low<high){
+            if (low<=high && list[high]> temp){
+                high--;
+            }
+            list[low] = list[high];
+            if (low<=high && list[low]<temp){
+                low++;
+            }
+            list[high] = list[low];
+
+
+        }
+        list[low] = temp;
+        return low;
+    }
+
     public void _quickSort(Integer[] list, int low, int high) {
         if (low < high) {
             int middle = getMiddle(list, low, high);  //将list数组进行一分为二

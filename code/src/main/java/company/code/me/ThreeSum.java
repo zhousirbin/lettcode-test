@@ -15,6 +15,11 @@ public class ThreeSum {
 
         List<List<Integer>> c =threeSum1(w) ;
         System.out.println(c);
+
+        int[] a1 = {1,3,5,6};
+
+
+
     }
 
     public static List<List<Integer>> threeSum(int[] nums) {
@@ -45,7 +50,7 @@ public class ThreeSum {
         List<List<Integer>> zlist=new ArrayList<>();
         List<Integer> list = null;
         Arrays.sort(nums);
-        for(int i=0;i<nums.length-2;i++){
+        for(int i=0;i<nums.length-2;i++){ //如果有10个元素，nums.length-2=8，即0到7，八个元素
 
             if (i == 0 || (i > 0 && nums[i] != nums[i-1])) {  //如果临近的值，则可以直接跳过
                 int a=nums[i];
@@ -89,5 +94,25 @@ public class ThreeSum {
             }
         }
         return res;
+    }
+
+
+    public static int searchInsert(int[] nums, int target) {
+        int len = nums.length;
+        int index = 0;
+        if (target < nums[0]){
+            return  0;
+        }
+        if (target > nums[len-1]){
+            return len;
+        }
+        for (int i=0;i<len-1;i++){
+            if (nums[i]<target&& nums[i+1]>=target){
+                index = i+1;
+            }
+
+        }
+
+        return index;
     }
 }

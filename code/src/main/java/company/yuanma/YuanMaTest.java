@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class YuanMaTest {
    public static void main(String[] args){
@@ -16,6 +17,10 @@ public class YuanMaTest {
        LinkedList<String> linkedList = new LinkedList<>();
        linkedList.add("we");
        HashMap<String,Integer> hashMap = new HashMap<>(4);
+
+       ConcurrentHashMap<String,Integer>  concurrentHashMap = new ConcurrentHashMap<>();
+
+
        //hashMap.put("a",8);
        for (int i=1;i<=8;i++){
            hashMap.put("a"+i,i);

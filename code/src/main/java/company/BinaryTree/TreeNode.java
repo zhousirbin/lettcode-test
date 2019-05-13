@@ -6,8 +6,11 @@ public class TreeNode<T> {
     public TreeNode<T> right;
     public TreeNode(T data, TreeNode<T> left, TreeNode<T> right)
     {
-        this.data = data;
-        this.left = left;
+        this.data  = data;
+        this.left  = left;
         this.right = right;
+    }
+
+    public TreeNode(int i) {
     }
 }

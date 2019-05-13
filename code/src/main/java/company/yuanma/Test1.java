@@ -12,6 +12,9 @@ public class Test1 {
         DateTime yesterday = today.plusDays(-1);
         System.out.println(yesterday);
         System.out.println(today);
+
+
+
     }
         public static boolean isPalindrome ( int x){
 

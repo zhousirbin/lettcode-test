@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Method;
 
 public class Exception {
 
@@ -13,6 +14,8 @@ public class Exception {
 //        } catch (FileNotFoundException e) {
 //
 //            System.out.println("***********");
+
+            Method method = null;
 //
        } catch (Throwable throwable) {
             Throwable se = throwable.getCause();

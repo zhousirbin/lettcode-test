@@ -1,6 +1,7 @@
 package company.annotion;
 
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -80,6 +81,14 @@ public class TestOne {
                 System.out.println(method.getName() + " desc = " + desc);
             }
         }
+
+
+        //获取某个注解的方法
+//        AnnotationTest01 annotation = method.getAnnotation(AnnotationTest01.class);
+//        if(annotation == null)
+//            continue;
+//        Method[] me = annotation.annotationType().getDeclaredMethods();
+        Annotation[] annotations = clz.getAnnotations();
     }
 
 }

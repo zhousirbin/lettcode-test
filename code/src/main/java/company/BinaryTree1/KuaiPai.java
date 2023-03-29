@@ -4,6 +4,7 @@ public class KuaiPai {
     public int getMiddle(Integer[] list, int low, int high) {
         int tmp = list[low];    //数组的第一个作为中轴
         while (low < high) {
+            //从后向前
             while (low < high && list[high] > tmp) {
                 high--;
             }

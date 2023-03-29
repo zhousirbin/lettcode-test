@@ -65,29 +65,24 @@ public class Binary96 {
    // 540. Single Element in a Sorted Array (Medium)
    // Input: [1, 1, 2, 3, 3, 4, 4, 8, 8]
    // Output: 2
+    //如果第四位和第五位相等，则向后找，因为前面都是一对对相等的
+    //如果不相等，则向前找
 
     public int singleNonDuplicate(int[] nums) {
 
         int l=0, h=nums.length-1;
         while (l< h){
-
             int m = l + (h-l)/2;
             if (m % 2 == 1) {
              m--; // 保证 l/h/m 都在偶数位，使得查找区间大小一直都是奇数
             }
-
             if (nums[m] == nums[m+1]){  //数在右边，比如1，1，2(m)，2，3，4，4
                 l = m+2;
-
             }else {
                 h =m;
             }
-
         }
-
-
         return nums[l];
-
     }
 
 
@@ -103,8 +98,6 @@ public class Binary96 {
             }
         }
         return nums[l];
-
-
     }
 
 //    34. Search for a Range (Medium)

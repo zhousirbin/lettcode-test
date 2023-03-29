@@ -136,6 +136,11 @@
             <artifactId>jedis</artifactId>
             <version>3.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>3.2.1</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -149,6 +154,20 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>ne</id>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
 
 
 </project>
